@@ -51,13 +51,33 @@ async function draw() {
     .attr("fill", "red")
 
   const xAxis = d3.axisBottom(xScale)
-    .ticks(10)
-    .tickFormat(d => d + "%")
 
-  ctr.append("g")
-    .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
+  const xAxisGroup = ctr.append("g")
     .call(xAxis)
-    
+    .style("transform", `translateY(${dimensions.ctrHeight}px)`)
+    .classed("axis", true)  
+
+
+  xAxisGroup.append("text")
+    .attr("x", dimensions.ctrWidth / 2)
+    .attr("y", 50)
+    .attr("fill", "black")
+    .text("Humidity")
+
+  const yAxis = d3.axisLeft(yScale)
+  
+  const yAxisGroup = ctr.append("g")
+    .call(yAxis)
+    .classed("axis", true)
+
+  yAxisGroup.append("text")
+    .attr("x", -dimensions.ctrHeight / 2)
+    .attr("y", -dimensions.margin.left +15 )
+    .attr("fill", "black")
+    .html("Temperature &deg; F")
+    .style("transform", "rotate(-90deg)")
+    .style("text-anchor", "middle")
+
 
 }
 
