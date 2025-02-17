@@ -1,24 +1,8 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-const data = [10, 20, 30, 40, 50];
+async function loadData() {
+  const data = await d3.json("data.json")
+  console.log(data)
+}
 
-const el = d3.selectAll("li").data(data)
-  // .join(
-  //   enter => {
-  //     return enter.append("li")
-  //       .style("color", "red")
-  //   },
-  //   update => {
-  //     return update.style("color", "blue")
-  //   },
-  //   exit => exit.remove()
-  // )
-  .text(d => d)
-
-  el.enter()
-    .append("li")
-    .text(d => d)
-
-  el.exit().remove()
-
-console.log(el)
+loadData()
