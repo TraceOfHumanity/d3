@@ -34,11 +34,13 @@ async function draw() {
 
   const xScale = d3.scaleLinear()
     .domain(d3.extent(data, xAccessor))
-    .range([0, dimensions.ctrWidth])
+    .rangeRound([0, dimensions.ctrWidth])
+    .clamp(true)
 
   const yScale = d3.scaleLinear()
     .domain(d3.extent(data, yAccessor))
-    .range([dimensions.ctrHeight, 0])
+    .rangeRound([dimensions.ctrHeight, 0])
+    .clamp(true)
 
   ctr.selectAll("circle")
     .data(data)
@@ -47,6 +49,16 @@ async function draw() {
     .attr("cy", d => yScale(yAccessor(d)))
     .attr("r", 5)
     .attr("fill", "red")
+
+  const xAxis = d3.axisBottom(xScale)
+    .ticks(10)
+    .tickFormat(d => d + "%")
+
+  ctr.append("g")
+    .attr("transform", `translate(0, ${dimensions.ctrHeight})`)
+    .call(xAxis)
+    
+
 }
 
 draw()
