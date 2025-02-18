@@ -49,8 +49,11 @@ async function draw() {
     .attr("cy", d => yScale(yAccessor(d)))
     .attr("r", 5)
     .attr("fill", "red")
+    .attr("data-temp", yAccessor)
 
   const xAxis = d3.axisBottom(xScale)
+    .ticks(5)
+    .tickFormat(d => d*100 + "%")
 
   const xAxisGroup = ctr.append("g")
     .call(xAxis)
