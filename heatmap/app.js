@@ -24,6 +24,10 @@ async function draw(el, scale) {
     colorScale = d3.scaleLinear()
       .domain(d3.extent(dataset))
       .range(["#ffffff", "#ff0000"])
+  } else if (scale === "quantize") {
+    colorScale = d3.scaleQuantize()
+      .domain(d3.extent(dataset))
+      .range(["white", "pink", "red"])
   }
 
   svg.append('g')
@@ -41,3 +45,4 @@ async function draw(el, scale) {
 }
 
 draw('#heatmap1', "linear")
+draw('#heatmap2', "quantize")
