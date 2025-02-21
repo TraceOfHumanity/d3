@@ -32,6 +32,10 @@ async function draw(el, scale) {
     colorScale = d3.scaleQuantile()
       .domain(dataset)
       .range(["white", "pink", "red"])
+  } else if (scale === "threshold") {
+    colorScale = d3.scaleThreshold()
+      .domain([45200, 135600])
+      .range(["white", "pink", "red"])
   }
 
   svg.append('g')
@@ -51,3 +55,4 @@ async function draw(el, scale) {
 draw('#heatmap1', "linear")
 draw('#heatmap2', "quantize")
 draw('#heatmap3', "quantile")
+draw('#heatmap4', "threshold")
