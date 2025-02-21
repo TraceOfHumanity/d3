@@ -35,7 +35,7 @@ async function draw(el, scale) {
   } else if (scale === "threshold") {
     colorScale = d3.scaleThreshold()
       .domain([45200, 135600])
-      .range(["white", "pink", "red"])
+      .range(d3.schemeReds[3])
   }
 
   svg.append('g')
