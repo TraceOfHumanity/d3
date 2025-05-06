@@ -138,9 +138,32 @@ async function draw() {
 
   const xAxis = d3.axisBottom(xScale)
 
-  ctr.append("g")
+  const xAxisGroup = ctr.append("g")
   .call(xAxis)
   .style("transform", `translateY(${dimensions.ctrHeight}px)`)
+  .classed("axis", true)
+
+  xAxisGroup.append("text")
+  .attr("x", dimensions.ctrWidth / 2)
+  .attr("y", dimensions.margin.bottom - 10)
+  .attr("fill", "black")
+  .text("Humidity")
+
+  const yAxis = d3.axisLeft(yScale)
+
+  const yAxisGroup = ctr.append("g")
+  .call(yAxis)
+  .classed("axis", true)
+
+  yAxisGroup.append("text")
+  .attr("x", -dimensions.ctrHeight / 2)
+  .attr("y", -dimensions.margin.left + 15)
+  .attr("fill", "black")
+  .html("Temperature &deg; F")
+  .style("transform", "rotate(-90deg)")
+  .style("text-anchor", "middle")
+  
+  
 }
 
 draw()
