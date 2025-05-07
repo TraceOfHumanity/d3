@@ -1,0 +1,92 @@
+[
+  {
+    "workout-name": "Run",
+    "workout-date": "2024-01-01",
+    "workout-duration": 1800,
+    "workout-exercises": [
+      "warmup",
+      "run",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Strength",
+    "workout-date": "2024-01-02",
+    "workout-duration": 1200,
+    "workout-exercises": [
+      "warmup",
+      "strength",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Yoga",
+    "workout-date": "2024-01-03",
+    "workout-duration": 1500,
+    "workout-exercises": [
+      "warmup",
+      "yoga",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Run",
+    "workout-date": "2024-01-04",
+    "workout-duration": 1300,
+    "workout-exercises": [
+      "warmup",
+      "run",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Boxing",
+    "workout-date": "2024-01-05",
+    "workout-duration": 800,
+    "workout-exercises": [
+      "warmup",
+      "boxing",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Run",
+    "workout-date": "2024-01-06",
+    "workout-duration": 3600,
+    "workout-exercises": [
+      "warmup",
+      "run",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Run",
+    "workout-date": "2024-01-07",
+    "workout-duration": 2400,
+    "workout-exercises": [
+      "warmup",
+      "run",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Run",
+    "workout-date": "2024-01-08",
+    "workout-duration": 1400,
+    "workout-exercises": [
+      "warmup",
+      "run",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Swimming",
+    "workout-date": "2024-01-09",
+    "workout-duration": 1600,
+    "workout-exercises": [
+      "warmup",
+      "swimming",
+      "cool down"
+    ]
+  }
+]
