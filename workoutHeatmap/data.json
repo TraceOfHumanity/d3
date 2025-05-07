@@ -88,5 +88,45 @@
       "swimming",
       "cool down"
     ]
+  },
+  {
+    "workout-name": "Run",
+    "workout-date": "2024-01-10",
+    "workout-duration": 1800,
+    "workout-exercises": [
+      "warmup",
+      "run",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Run",
+    "workout-date": "2024-01-11",
+    "workout-duration": 1000,
+    "workout-exercises": [
+      "warmup",
+      "run",
+      "cool down"
+    ]
+  },
+  {
+    "workout-name": "Swimming",
+    "workout-date": "2024-01-12",
+    "workout-duration": 1200,
+    "workout-exercises": [
+      "warmup",
+      "swimming",
+      "cool down"
+    ]
+  }, 
+  {
+    "workout-name": "Crossfit",
+    "workout-date": "2024-01-13",
+    "workout-duration": 800,
+    "workout-exercises": [
+      "warmup",
+      "crossfit",
+      "cool down"
+    ]
   }
 ]
