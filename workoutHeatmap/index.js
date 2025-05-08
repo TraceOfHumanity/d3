@@ -45,7 +45,7 @@ async function draw() {
     .join("rect")
     .attr("width", box - 2)
     .attr("height", box - 2)
-    .attr('rx', 5)
+    .attr('rx', 4)
     .attr("x", (d, i) => box * ((i / 7) | 0))
     .attr("y", (d, i) => box * ((i % 7)))
     .attr("fill", d => colorScale(d["workout-duration"]))
